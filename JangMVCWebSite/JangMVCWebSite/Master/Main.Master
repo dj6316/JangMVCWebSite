@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="JangMVCWebSite.Controllers.Master.AbstractMaster" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="Head" runat="server"></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="JavaScript" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="Contain" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

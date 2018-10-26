@@ -95,3 +95,5 @@ C:\WebSite\JangMVCWebSite\JangMVCWebSite\JangMVCWebSite\bin\ko\Microsoft.Owin.Se
 C:\WebSite\JangMVCWebSite\JangMVCWebSite\JangMVCWebSite\obj\Debug\JangMVCWebSite.csprojResolveAssemblyReference.cache
 C:\WebSite\JangMVCWebSite\JangMVCWebSite\JangMVCWebSite\obj\Debug\JangMVCWebSite.dll
 C:\WebSite\JangMVCWebSite\JangMVCWebSite\JangMVCWebSite\obj\Debug\JangMVCWebSite.pdb
+C:\WebSite\JangMVCWebSite\JangMVCWebSite\JangMVCWebSite\obj\Debug\Interop.MSXML2.dll
+C:\WebSite\JangMVCWebSite\JangMVCWebSite\JangMVCWebSite\obj\Debug\JangMVCWebSite.csproj.ResolveComReference.cache

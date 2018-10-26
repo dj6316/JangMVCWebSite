@@ -26,5 +26,10 @@ namespace JangMVCWebSite.Controllers
 
             return View();
         }
+
+        public ActionResult ApiTest()
+        {
+            return View();
+        }
     }
 }
