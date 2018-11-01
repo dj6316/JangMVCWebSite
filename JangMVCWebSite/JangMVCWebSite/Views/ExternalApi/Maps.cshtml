@@ -1,0 +1,43 @@
+﻿
+
+<!-- 옵션 선택 -->
+<div class="sel_satellite">
+    <h3 class="blind">일반/위성 지도 선택</h3>
+    <ul>
+        <li class="on">
+            <a href="#" class="spm spm_s_default nclicks(mts.normal)" data-map_type="vector">일반</a>
+            <div class="ly_ssel ly_ssel_basic" style="display: none;">
+                <p><input type="checkbox" id="chk_basic" class="input_chk" data-map_type="terrain"><label for="chk_basic" class="lb_chk">지형도</label></p>
+                <span class="spm spm_arrow_up"></span>
+                <span class="opac_line"></span>
+            </div>
+        </li>
+        <li class="">
+            <a href="#" class="spm spm_s_satellite nclicks(mts.satellite)" data-map_type="satellite">위성</a>
+            <div class="ly_ssel ly_ssel_satellite" style="display: none;">
+                <p><input type="checkbox" id="chk_hybrid" class="input_chk" data-map_type="hybrid"><label for="chk_hybrid" class="lb_chk">겹쳐보기</label></p>
+                <span class="spm spm_arrow_up"></span>
+                <span class="opac_line"></span>
+            </div>
+        </li>
+    </ul>
+</div>
+<!-- Maps -->
+<div id="map" style="width:100%;height:400px;"></div>
+
+<script type="text/javascript">
+        var map = null;
+
+        function initMap() {
+            map = new naver.maps.Map('map', {
+                center: new naver.maps.LatLng(37.3595704, 127.105399),
+                zoom: 10,
+                zommControl: true,
+                zommControlOption: {
+                    position : naver.maps.Position.TOP_RIGHT
+                }
+            });
+        }
+
+   var btns = $("")
+</script>

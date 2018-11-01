@@ -1,62 +1,25 @@
 ﻿@{
     ViewBag.Title = "ApiTest";
 }
+<script type="text/javascript" src="~/Scripts/Api/DirectSendProc.js"></script>
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=LLs9gfgAyO7hWou4hEhY&callback=initMap"></script>
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("button[name='btn_DirectSend']").on("click", function () {
-            var id = $(this).data("id");
-            var url = "";
-            switch (id) {
-                case 1:
-                    url = "/ExternalApi/MSXMLType";
-                    break;
-                case 2:
-                    url = "/ExternalApi/HttpWebRequestType";
-                    break;
-                case 3:
-                    url = "/ExternalApi/WebClientType";
-                    break;
-                default:
-                    break;
-            }
-
-            $.getJSON(url, function (data) {
-                alert(data.result);
-            });
-        });
-    });
-</script>
-
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">기술설명</th>
-            <th scope="col">전송</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>MSXML</td>
-            <td>
-                <button type="button" name="btn_DirectSend" data-id="1" class="btn btn-primary">DirectSend_MSXML</button>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>HttpWebRequest</td>
-            <td>
-                <button type="button" name="btn_DirectSend" data-id="2" class="btn btn-primary">DirectSend_MSXML</button>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>WebClient</td>
-            <td>
-                <button type="button" name="btn_DirectSend" data-id="3" class="btn btn-primary">DirectSend_MSXML</button>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="tabContainer">
+    <h2>Api 관련</h2>
+    <ul id="apiTab" class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+            <a data-target="#directSend" id="directSend-tab" role="tab" data-toggle="tab" aria-controls="directSend" aria-expanded="true">DirectSend</a>
+        </li>
+        <li role="presentation" class="">
+            <a data-target="#maps" id="maps-tab" role="tab" data-toggle="tab" aria-controls="maps" aria-expanded="false">Maps</a>
+        </li>
+    </ul>
+    <div id="apiTabContent" class="tab-content">
+        <div role="tabpanel" class="tab-pane fade active in" id="directSend" aria-labelledby="directSend-tab">
+            @{Html.RenderAction("DirectSendView", "ExternalApi");}
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="maps" aria-labelledby="maps-tab">
+            @{Html.RenderAction("Maps", "ExternalApi");}
+        </div>
+    </div>
+</div>
